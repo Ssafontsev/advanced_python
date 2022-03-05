@@ -1,7 +1,7 @@
 # Домашние задания на курсе «Продвинутый Python»
 
 ## Профессиональная работа с Python.
-1. [Import. Module. Package](1.Import.Module.Package/)  
+1. [Import. Module. Package](1_Import_Module_Package/)  
 2. [Iterators. Generators. Yield](2.Iterators.Generators.Yield/)    
 3. [Decorators](3.Decorators/)  
 
