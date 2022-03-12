@@ -1,9 +1,9 @@
 import csv
 import re
+from pprint import pprint
 
 PHONE_PATTERN = r'(\+7|8)*[\s\(]*(\d{3})[\)\s-]*(\d{3})[-]*(\d{2})[-]*(\d{2})[\s\(]*(доб\.)*[\s]*(\d+)*[\)]*'
 PHONE_SUB = r'+7(\2)-\3-\4-\5 \6\7'
-
 
 def open_file():
   with open("phonebook_raw.csv", encoding="utf-8") as f:
@@ -15,6 +15,7 @@ def formatting_names():
   new_list = list()
   for item in open_file():
     full_name = ' '.join(item[:3]).split(' ')
+    print(full_name)
     result = [full_name[0], full_name[1], full_name[2], item[3], item[4],
               re.sub(PHONE_PATTERN, PHONE_SUB, item[5]), item[6]]
     new_list.append(result)
