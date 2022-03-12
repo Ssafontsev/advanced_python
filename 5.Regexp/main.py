@@ -19,6 +19,7 @@ def formatting_names():
     new_list.append(result)
   return new_list
 
+
 def reformatting():
   new_list = formatting_names()
   for contact in new_list:
