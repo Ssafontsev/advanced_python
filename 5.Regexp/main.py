@@ -10,6 +10,7 @@ def open_file():
     contacts_list = list(rows)
   return contacts_list
 
+
 def formatting_file():
   new_list = list()
   for item in open_file():
