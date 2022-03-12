@@ -6,6 +6,7 @@ PHONE_SUB = r'+7(\2)-\3-\4-\5 \6\7'
 
 
 
+
 def open_file():
   with open("phonebook_raw.csv", encoding="utf-8") as f:
     rows = csv.reader(f, delimiter=",")
