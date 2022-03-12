@@ -11,7 +11,8 @@ def open_file():
   return contacts_list
 
 
-def formatting_file():
+
+def formatting_names():
   new_list = list()
   for item in open_file():
     full_name = ' '.join(item[:3]).split(' ')
@@ -21,7 +22,7 @@ def formatting_file():
   return new_list
 
 def reformatting():
-  new_list = formatting_file()
+  new_list = formatting_names()
   for contact in new_list:
     first_name = contact[0]
     last_name = contact[1]
@@ -44,8 +45,6 @@ def reformatting():
     if i not in result_list:
       result_list.append(i)
   return result_list
-
-
 
 def saving_csv():
   with open("phonebook.csv", "w", encoding="utf-8") as f:
