@@ -4,13 +4,11 @@ import re
 PHONE_PATTERN = r'(\+7|8)*[\s\(]*(\d{3})[\)\s-]*(\d{3})[-]*(\d{2})[-]*(\d{2})[\s\(]*(доб\.)*[\s]*(\d+)*[\)]*'
 PHONE_SUB = r'+7(\2)-\3-\4-\5 \6\7'
 
-
 def open_file():
   with open("phonebook_raw.csv", encoding="utf-8") as f:
     rows = csv.reader(f, delimiter=",")
     contacts_list = list(rows)
   return contacts_list
-
 
 def formatting_names():
   new_list = list()
@@ -20,7 +18,6 @@ def formatting_names():
               re.sub(PHONE_PATTERN, PHONE_SUB, item[5]), item[6]]
     new_list.append(result)
   return new_list
-
 
 def reformatting():
   new_list = formatting_names()
