@@ -15,7 +15,6 @@ def formatting_names():
   new_list = list()
   for item in open_file():
     full_name = ' '.join(item[:3]).split(' ')
-    print(full_name)
     result = [full_name[0], full_name[1], full_name[2], item[3], item[4],
               re.sub(PHONE_PATTERN, PHONE_SUB, item[5]), item[6]]
     new_list.append(result)
